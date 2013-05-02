@@ -253,7 +253,7 @@ a.tar span {
 }
 
 a.code {
-  background: transparent url(../images/code.png) no-repeat 0 2px;
+/*  background: transparent url(../images/code.png) no-repeat 0 2px; */
   width: 30px;
   height: 21px;
   display: block;
