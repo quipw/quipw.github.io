@@ -1,2 +1,0 @@
-Lab: 10/10
-HW: 18/20 (principle and year values are of type int instead of double)

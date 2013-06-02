@@ -1,2 +1,0 @@
-Lab: 8.5/10 (you printed to the console instead of a JMessageDialog)
-HW: 17/20 (incorrect formula)

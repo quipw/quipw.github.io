@@ -1,2 +1,0 @@
-Lab: 7.5/10 (no conversion factor (-1); output prints to console instead of displaying a JMessageDialog (-1.5))
-HW: 20/20
