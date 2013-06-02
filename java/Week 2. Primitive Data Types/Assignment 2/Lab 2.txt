@@ -1,0 +1,15 @@
+Lab 2:Pounds to Kilograms Conversion
+
+Write a program that reads a weight in pounds as a double from an input dialog (using the JOptionPane.showInputDialog() method), converts it to kilograms, and displays the result in a message dialog box (using the JOptionPane.showMessageDialog() method).Display the answer in a sentence  similar to this
+
+ 1 pound equals 0.454 kiligrams
+
+To convert from pounds to kiligrams: One pound is 0.454 kilograms.
+
+Use a constant for the conversion factor. Give it a meaningful name
+
+Be sure to put a comment at the top of your program that tells what your program does – not how it does it - and include your name. Use /** …*/ style. Use proper indenting, follow naming conventions, leave spaces around operators, and comment your code.
+
+ 
+
+You will just submit the source code for this lab, no output. Upload the .java file using the buttons at the bottom of the page.  See Assignment Submission for details.

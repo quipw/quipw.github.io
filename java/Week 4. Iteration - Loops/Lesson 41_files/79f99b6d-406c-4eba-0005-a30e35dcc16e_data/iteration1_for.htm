@@ -1,0 +1,221 @@
+<html><head>
+<title>Loops - for</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+.style1 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<h1 align="center">for Loops</h1>
+<p align="center">&nbsp; </p>
+<table cellpadding="10" width="81%">
+  <tbody><tr>
+    <td width="72%">Sometimes we want to do the same thing, or nearly the same 
+      thing, more than one time. Officially this is called iteration. The unofficial 
+      term is looping.</td>
+    <td width="28%">
+      <div align="right"><img src="iteration1_for_data/racetrack.png" height="100" width="128"></div>
+    </td>
+  </tr>
+</tbody></table>
+<p align="left">&nbsp;</p>
+<p align="left">Let's say we want to print the numbers 1 through 10 and their 
+  squares. </p>
+<p align="left">&nbsp;</p>
+<h2 align="left">Using Brute Force </h2>
+<p align="left">We could use a brute force method.</p>
+<p class="segment" align="left">System.out.println( 1 + " squared is " + 1 * 1);<br>
+  System.out.println( 2 + " squared is " + 2 * 2);<br>
+  . . . <br>
+  System.out.println( 10 + " squared is "+ 10 * 10); </p>
+<p align="left">&nbsp;</p>
+<p align="left">But there is a smarter way. We will use a loop. When we know exactly 
+  how many times we want to do a loop, we usually use a <code>for</code> loop. 
+  A <code>for</code> loop has this syntax:</p>
+<p align="left">&nbsp;</p>
+<h2 align="left">for Syntax</h2>
+<p class="segment" align="left">for (initialization; test condition; update) <br>
+  &nbsp;&nbsp;&nbsp;statement;</p>
+<ul>
+  <li>initialization - sets an initial value for the loop control variable</li>
+  <li>test condition - the loop will continue as long as this expression is true</li>
+  <li>update - changes the value of the loop control variable in each pass through 
+    the loop</li>
+  <li>statement - can be one statement or a block of statements in { }. This statement 
+    or block of statements is executed as long as the test condition is true</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Using a for Loop </h2>
+<p>The code segment for printing the squares of the numbers 1 to 10 could be written:</p>
+<pre class="segment">for (int i = 1; i &lt;= 10; i++) 
+{
+   System.out.println(i + " squared is " + i * i);
+}</pre>
+<p>&nbsp;</p>
+<p>Look at the first line - called the for loop header</p>
+<ul>
+  <li><code>int i = 1;</code> This declares a new variable <code>i</code>
+    and assigns it the value 1; This variable exists only inside the for loop. 
+    When we pass the closing brace }, <code>i</code><tt> </tt>is no longer defined. This is the loop control variable.</li>
+  <li><code>i &lt;= 10;</code> This says that the loop should execute as long as 
+    <code>i</code> is less than or equal to 10</li>
+  <li><code>i++</code> This increments <code>i</code><tt> </tt>by 1 at the end 
+    of each iteration before the test is performed. The test determines if we 
+    go through the loop again.</li>
+</ul>
+<p><font face="Courier New, Courier, mono">System.out.println(i + " squared is 
+  " + i * i);</font> is the statement executed on each pass through the loop.We 
+  could include several statements between the braces, and they would all be executed 
+  on each integration.</p>
+<p class="style1">NOTE 1: This statement violates the style rule that 
+you should not do calculations in an output statement. I am doing it 
+here to simplify the discussion of the for loop. But you should adhere 
+to the rule in your code as I would if I were doing a professional 
+project.</p>
+<p class="style1">Note 2: Remember the style rule that says not to use 
+single letters as variable names? If you read that statement again now 
+with a little more Java under your belt, you will notice it says "except
+ for loop control variables" In the code above, <code>i</code> is the 
+loop control variable. It is traditional to use i, k, n, or j for loop 
+control variables - especially in a situation like this when it is just a
+ counter. We could use count or counter instead, and some people do. 
+Feel free to do either one.</p>
+<h2>Playing Computer</h2>
+<p>Let's "play computer" and do a walk-through of the code.</p>
+<ul>
+  <li>At the top of the for loop we (as the computer) declare<tt> </tt><code>i</code><tt> 
+    </tt>and finalize it to 1</li>
+  <li>We test to see if <code>i</code><tt> </tt>is less than or equal to 10. It 
+    is, so we execute the loop</li>
+  <li>In this case there is only one statement in the loop block. We execute it 
+    and print: <code>1 squared is 1</code></li>
+  <li>We go back to the top of the loop and do the update <tt>(</tt><code>i++</code><tt>)</tt> 
+    Now <code>i</code> is 2</li>
+  <li>We test to see if <code>i</code> is less than or equal to 10. It is, so 
+    we execute the loop</li>
+  <li>We execute the block of statements (the <code>println</code>) and print: 
+    <code>2 squared is 4</code></li>
+  <li>We go back to the top of the loop and do the update <tt>(</tt><code>i++</code><tt>)</tt> 
+    Now <code>i</code> is 3<br>
+  </li>
+</ul>
+<p>Let's skip some steps.</p>
+<ul>
+  <li>Now<tt> </tt><code>i</code> is 10</li>
+  <li>We test to see if <code>i</code> is less than or equal to 10. It is, so 
+    we execute the loop</li>
+  <li>We execute the block of statements (the <code>println</code>) and print: 
+    <code>10 squared is 100</code></li>
+  <li>We go back to the top of the loop and do the update <tt>(</tt><code>i++</code><tt>)</tt> 
+    Now<tt> </tt><code>i</code> is 11</li>
+  <li>We test to see if <code>i</code><tt> </tt>is less than or equal to 10. It 
+    is not, so we do not execute the <code>println</code>. We execute the first 
+    statement after the end of the loop.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Try It Yourself</h2>
+<p>See if you can write a program that will calculate the sum of the integers 
+  1 through 10 (counting both 1 and 10). After you try it, you can click here 
+  to <a href="http://www.fgamedia.org/faculty/kobrien/27a-ng/lessons/lesson4/forloopsolution.html">see a solution</a>.</p>
+<p>&nbsp;</p>
+<div class="endlesson"> 
+<p class="endheader">Next</p>
+  <p>We will look at a while loops next. </p>
+  <p>&nbsp;</p>
+</div>
+ 
+
+
+</body></html>

@@ -1,0 +1,282 @@
+<html><head>
+<title>Arrays</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+-->
+</style>
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<h1 align="center">Array Introduction</h1>
+<p align="left">An array is a set of cells to contain data. When we declare an 
+  array reference, we specify what type of data the cells can hold: ints, doubles, 
+  String references. To declare an array reference, we specify a data type, square 
+  brackets [], and a name.</p>
+<h2 align="left">Syntax</h2>
+<p align="left">Here is the syntax to declare an array reference variable.</p>
+<p><span class="segment">int[] scores;</span></p>
+<p align="left">&nbsp;</p>
+<p align="left">The square brackets [] can also go on the other side of the variable 
+  name.</p>
+<p><span class="segment">int scores[];</span></p>
+<p align="left"> But the first way is more common in Java.</p>
+<p align="left">&nbsp;</p>
+<p align="left">Now we have an array reference variable, and it can refer to an 
+  array that holds a bunch of <code>ints</code>. </p>
+<p align="left">&nbsp;</p>
+<h2 align="left">Instantiating an Array</h2>
+<p align="left">Declaring the array variable above <b>does not</b> allocate space 
+  for the <code>ints</code>. It only creates the array reference variable that 
+  can <b>refer</b> to an array of <code>ints</code>. To create the array itself 
+  - to allocate space for the <code>ints</code>- we use the <code>new</code> operator. 
+  The following creates space to hold 5 <code>ints</code>:</p>
+<p> <span class="segment">new int[5];</span></p>
+<p align="left">&nbsp;</p>
+<p align="left">We save the reference to the array in an array reference:</p>
+<p><span class="segment">scores = new int[5];</span></p>
+<p align="left">&nbsp;</p>
+<p align="left">This can be done all in one statement:</p>
+<p><span class="segment">int[] scores = new int[5];</span></p>
+<p align="left">&nbsp;</p>
+<p align="left">Now we have five variables that we can refer to as <code>scores[0], 
+  scores[1], scores[2], scores[3], and scores[4].</code></p>
+<p align="left">&nbsp;</p>
+<p align="left">The integer in square brackets used to reference a particular 
+  element is called an index. The numbering of indexes starts with 0. scores[0] 
+  is the first element in the array. If we try to use scores[25] we will get an 
+  error at runtime, an ArrayIndexOutOfBoundsException.</p>
+<p align="left">Once an array is allocated (created), its size can NOT be changed.</p>
+<p align="left">&nbsp;</p>
+<h2 align="left">length</h2>
+<p align="left">We call the number of elements in the array its length. The <code>length</code> 
+  is a constant variable, and we access it as a variable, not a method. (Notice 
+  there are no parentheses.)</p>
+<p align="left"><span class="segment">scores.length</span></p>
+<p align="left">&nbsp;</p>
+<p align="left">While the first array element is referenced as <code>scores[0]</code>, 
+  the last element will be <code>scores[scores.length - 1]</code>.</p>
+<p align="left"><br>
+</p>
+<h2 align="left">Initialization</h2>
+<p align="left">Array elements are initialized for you. Remember that I told you 
+  earlier that all variables in Java have to be initialized? You have to initialize 
+  local variables in the main method (or any other method). This is a case where 
+  Java initializes variables for you. Array elements are initialized by Java.</p>
+<ul>
+  <li> 0 for ints and doubles and other numeric arrays</li>
+  <li> false for boolean</li>
+  <li> '\u0000' for char</li>
+  <li> null for objects
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p>You often want to put meaningful values into an array as soon as it is constructed. 
+  This is also called initializing. Here is an example of creating an array and 
+  initializing it (filling it with our data.)</p>
+<p class="segment">double[] temperature = new double[5];<br>
+  temperature[0] = 50.5;<br>
+  temperature[1] = 45.9;<br>
+  temperature[2] = 60.2;<br>
+  temperature[3] = 75.2;<br>
+  temperature[4] = 85.1;</p>
+<p>&nbsp;</p>
+<h3>Initializing at Construction</h3>
+<p> If you happen to know the values, you can initialize and instantiate an array 
+  at the same time</p>
+<p class="segment">double[] temperature = {50.5, 45.9, 60.2, 75.2, 85.1}; </p>
+<p>You can only do this initially. You can not use it to change values once the 
+  array is created.</p>
+  <p>&nbsp;</p>
+<h2>Using Array Variables</h2>
+<p><code><tt>temperature[3]</tt></code> is called an indexed variable. What is 
+  its value? If you said 75.2, you are correct. (Remember index numbers start with 0.) What is<tt> </tt><code>temperature[5]</code>? That array element doesn't exist, and if you try to access it you will 
+  get an exception, ArrayIndexOutOfBoundsException</p>
+<p></p>
+<p>We can use the indexed variables in expressions just like other variables.</p>
+<p> <span class="segment">total = scores[0] + score[1] + &#8230; scores[4]; </span></p><br>
+<p> <span class="segment">System.out.println(scores[3]);</span></p><br>
+<p> <span class="segment">scores[3] = 87;</span></p><br>
+<p> <span class="segment">temperature[0] = 69;</span></p>
+<p>&nbsp;</p>
+<h2>for Loop and Arrays</h2>
+<p>
+  We often use a <code>for</code> loop to access array elements since we know 
+  exactly how many elements there are. The following code segment will print all 
+  the elements in the temperature array.</p>
+<pre class="segment">for (int i = 0; i &lt; temperature.length; i++)
+{
+   System.out.println(temperature[i]);
+}</pre>
+<p>&nbsp;</p>
+<p>We could double every integer in an array myList like this:</p>
+<pre class="segment">for (int i = 0; i &lt; mylist.length; i++)
+{
+    myList[i] = myList[i] * 2;
+}</pre>
+<p>Notice the use <code>myList.length</code>. This loop will work no matter what 
+  the length of the array <code>myList</code> is.</p>
+<p>&nbsp; </p>
+<h2>Copying Arrays</h2>
+<p>Look at this example carefully. Assignment of one array to another does NOT 
+  copy the values from one to the other.</p>
+<pre class="segment">int[ ] num = {1,2,3,4,5}        //creates and initializes an array
+int[ ] newNum = new int[10];    //creates a new array <br>newNum = num;          //both point to same array, second array is lost <br>newNum[0] = 7;         //then num[0] is also 7<br>
+</pre>
+<p>&nbsp;</p>
+<p>If you want to have two different arrays with the same data, you need to copy 
+  the values individually from one to the other. There is a system utility (System.arraycopy()) 
+  that will do it for you. It has this syntax</p>
+<p><span class="segment">System.arraycopy(fromArray, fromStart, toArray, toStart, count);</span></p>
+<p>&nbsp;</p>
+<p>To copy all the values in <code>num</code> into <code>newNum</code>, you would 
+  do this:</p>
+<p> <span class="segment">System.arraycopy(num, 0, newNum, 0, num.length);</span></p>
+<p>You can also use a for loop.</p>
+
+
+<p>&nbsp;</p>
+<h3>Try It Yourself</h3>
+<p>Can you write code that will copy the values from <code>num</code> into <code>newNum</code> 
+  using a for loop? After trying it, <a href="http://www.fgamedia.org/faculty/kobrien/27a-ng/lessons/lesson7/copyarraysolution.html">click here 
+  for a solution</a>.</p>
+<p>&nbsp;</p>
+<h2>Enhanced for Loop</h2>
+<p>The enhanced for loop was a new addition in Java 5.0. It is just a convenience, 
+  you can always use a regular for loop. You use it to visit every element in 
+  a data structure like an array.<br>
+</p>
+<p>Here is an application to print all the values in an array scores using an enhanced for loop.</p>
+<h3>EnhancedFor.java</h3>
+<pre class="code">/**
+   This is a java application to show using
+   enhanced for loop
+
+   @author Kathleen O'Brien
+
+*/
+public class EnhancedFor
+{
+   public static void main(String arg[])
+   {
+      int[] scores = {95, 90, 98, 92, 94};
+
+      for (int nextScore : scores)
+      {
+         System.out.print(nextScore + " ");
+      }
+      
+      System.out.println();
+   }
+}
+  </pre>
+<p>&nbsp;</p>
+<p>You read it "for each int nextScore in scores."</p>
+<p><code>int nextScore</code> declares a variable of type int. <code>nextScore</code> 
+  is a local variable. It exists only in the loop. Notice that you don't have 
+  to worry about whether to start at 1 or 0 and whether the condition should be 
+  less than or less than or equal to. This simply takes each element in the array 
+     <code>scores</code> one at a time, assigns the value to <code>nextScore</code> and the executes 
+  the statements in the loop body.<br>
+</p>
+<p>&nbsp;</p>
+<div class="endlesson">
+<p class="endheader">Next</p>
+  <p>Now let's look at solving our original problem of asking the user to input 
+    the temperatures for each month and then finding the average using what we 
+    have learned about arrays.</p>
+</div>
+
+
+
+</body></html>

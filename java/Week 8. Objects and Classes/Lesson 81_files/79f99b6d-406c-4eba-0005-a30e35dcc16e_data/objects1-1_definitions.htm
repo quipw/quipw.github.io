@@ -1,0 +1,274 @@
+<html lang="en"><head>
+<title>Objects - Definitions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+-->
+</style>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+    
+
+ 
+  
+<h1>Introduction and Definitions</h1>
+  
+<p>&nbsp;</p>
+<h2>&nbsp;</h2>
+  
+<p>&nbsp;</p>
+<div align="center"> 
+<table width="75%" border="0" cellpadding="10" cellspacing="10">
+  <tbody><tr> 
+    <td> 
+        <div align="center"><img src="objects1-1_definitions_data/recipe.gif" alt="recipe" width="64" height="64"></div>
+    </td>
+    <td> 
+        <div align="center"><img src="objects1-1_definitions_data/pie.gif" alt="pumpkin pie" width="64" height="64"></div>
+    </td>
+  </tr>
+  <tr> 
+    <td> 
+      <div align="center">The class is like the recipe.</div>
+    </td>
+    <td> 
+      <div align="center">The object is the pumpkin pie.</div>
+    </td>
+  </tr>
+</tbody></table>
+ </div>
+<p>&nbsp;</p>
+<p>What we have done so far has been procedural programming. The wave of the future 
+  is Object-Oriented Programming, also called OOP In object-oriented programming, 
+  you can use what you have learned so far</p>
+<ul>
+  <li>variable</li>
+  <li>data types</li>
+  <li>if</li>
+  <li>loops</li>
+  <li>arrays<br>
+  </li>
+</ul>
+<p>You can also use and create classes and objects. This provides modularity, 
+  flexibility, reusability, and clarity in our code.</p>
+<p>In a procedural programming, data and operations on the data are separate. 
+  In object-oriented programming data and operations on the data are combined 
+  into a single entity called an object.<br>
+</p>
+<h2>What are objects?</h2>
+<p>Objects are data entities that have properties (also called fields, attributes, 
+  variables) and behavior. To use an object, we do not need to know how it is 
+  built inside ( how it is coded). All we need to know is how to "order" 
+  an instance of the object and how to make it behave (do what we want). This 
+  is the principle of encapsulation. Data is encapsulated in the object and hidden 
+  from the user of the object.<br>
+</p>
+  <p>If I want a new car object, I don't need to know how to build 
+    one myself. I just need to know what steps to take to order one made for me. 
+    I specify certain options, and I get the car.</p>
+  <p>What properties does a car have? Let's list a few. </p>
+
+<ul>
+  <li> color</li>
+  <li>model</li>
+  <li>engine size</li>
+  <li>number of doors</li>
+</ul>
+<p>What behaviors do we want a car to have?</p>
+<ul>
+  <li>drive</li>
+  <li>stop</li>
+  <li>turn left</li>
+  <li>turn right</li>
+  <li>back up</li>
+  <li>turn on the lights</li>
+</ul>
+<p>Let's make an object of this type.</p>
+<p>&nbsp;</p>
+<table summary="Table of properties and their values for a Car object" width="22%" border="2">
+  <caption> <strong> Specific Car Object <br>
+  </strong>
+  </caption> 
+  <tbody><tr>
+    <th width="68%">Property </th>
+    <th width="32%"> Value</th>
+  </tr>
+  <tr>
+    <td width="68%">color </td>
+    <td width="32%"> red</td>
+  </tr>
+  <tr>
+    <td width="68%">model</td>
+    <td width="32%">ford</td>
+  </tr>
+  <tr>
+    <td width="68%"> engine size </td>
+    <td width="32%">350</td>
+  </tr>
+  <tr>
+    <td width="68%">number of doors</td>
+    <td width="32%">2</td>
+  </tr>
+</tbody></table> 
+<p>&nbsp;</p>
+<p>Let's make another.</p>
+<p>&nbsp;</p>
+<table summary="Table of properties and their values for a Car object" width="22%" border="2">
+  <caption> <strong>Another Specific Car Object <br>
+  </strong>
+  </caption> 
+  <tbody><tr>
+    <th width="68%">Property </th>
+    <th width="32%"> Value</th>
+  </tr>
+  <tr> 
+    <td width="68%">color </td>
+    <td width="32%"> white</td>
+  </tr>
+  <tr> 
+    <td width="68%">model</td>
+    <td width="32%">honda</td>
+  </tr>
+  <tr> 
+    <td width="68%"> engine size </td>
+    <td width="32%">250</td>
+  </tr>
+  <tr> 
+    <td width="68%">number of doors</td>
+    <td width="32%">4</td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p>Both of these objects have the listed behaviors. They can drive, stop, etc.</p>
+<table summary="" width="75%" border="0" cellpadding="10">
+  <tbody><tr>
+    <td><img src="objects1-1_definitions_data/red_car2.gif" alt="red car" width="64" height="64"></td>
+    <td><img src="objects1-1_definitions_data/blue_car.gif" alt="blue car" width="64" height="64"></td>
+    <td><img src="objects1-1_definitions_data/white_car.gif" alt="white car" width="64" height="64"></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p>In Java, properties are called instance fields or instance variables. A different 
+  set of instance variable values goes with each specific object - with each instance 
+  of the object. Each car has its own color variable. I can change the color of 
+  the first car without effecting the second car.</p>
+<p>Behaviors are called methods. Methods are messages or instructions that we, 
+  as programmers, send to the object to get it to do what we want.</p>
+<p>All objects of the same type belong to the same class. In our example, all 
+  our car objects belong to the Car class. Each car object is called an instance 
+  of the class Car.
+  </p><p>The red car above is an instance of class Car. The white car is also an instance 
+  of Car.</p>
+<p><br>
+</p>
+<h2>What are Classes?</h2>
+<p>Classes are factories for making objects. We put in our requirements and out 
+  pops an object. Another way to think of this is to say that the class is like 
+  a recipe for pumpkin pie and the object is the actual pie that you make from 
+  the recipe. You can make many objects ( the pie ) from the class (the pie recipe).</p>
+
+<h2>UML</h2>
+<p>UML stands for Uniform Modeling Language. It is a way of visually representing 
+  objects and the classes they belong to. Here is a modified version of the UML 
+  for the Car class</p>
+<p align="center"><img src="objects1-1_definitions_data/car_uml.gif" width="576" height="336"></p>
+<div class="endlesson">
+<p class="endheader">Next</p>
+  <p>Now let's see how to create objects in Java. 
+  </p><p>&nbsp;
+</p></div>
+
+
+
+
+
+</body></html>

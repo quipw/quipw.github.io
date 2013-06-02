@@ -1,0 +1,290 @@
+<html><head>
+<title>Using Our Method</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+-->
+</style>
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+<h1>Using Our Method </h1>
+<p>&nbsp;</p>
+<h2>Adding the Method to a Class</h2>
+<p>All methods must exist in a class. We will put the <code>min</code> method 
+  from the last section into a class called <code>MinTest</code>.</p>
+<h3>MinTest Version 1</h3>
+<pre class="code">public class MinTest
+{
+   /**
+      Gets the smaller of two values
+      @param num1 the first number
+      @param num2 the second number
+      @return the smaller of the two values
+   */
+   public static int min(int num1, int num2) //method header
+   {
+      int minimum = num1;
+
+      if (num2 &lt; num1)
+      {
+         minimum = num2;
+      }
+
+      return minimum;
+   }
+}</pre>
+<p>This is a valid class, but we can not execute it. There is no main 
+method. Every Java application starts its execution with a main method.</p>
+<h2>Calling Our Method From the Same Class</h2>
+<p>In order to execute the method, it needs to be called from a main method. We 
+  will add the main method to the <code>MinTest</code> class.</p>
+<h3>MinTest Version 2</h3>
+<pre class="code">public class MinTest
+{
+<b>   public static void main(String[] args)
+   {
+      int a = 10;
+      int b = 20;
+      int smaller = min(a, b);
+      System.out.println("The smaller of "
+        + a + " and " + b + " is " + smaller);
+      System.out.print("We can call a "
+        + "method without assigning it's "
+        + "return value to a variable: ");
+      System.out.println(min(a,b));
+   }</b>
+
+   /**
+      Gets the smaller of two values
+      @param num1 the first number
+      @param num2 the second number
+      @return the smaller of the two values
+   */
+   public static int min(int num1, int num2) //method header
+   {
+      int minimum = num1;
+
+      if (num2 &lt; num1)
+      {
+         minimum = num2;
+      }
+
+      return minimum;
+   }
+}</pre>
+<p>&nbsp; 
+</p><p>In the main method, we declare and initialize a and b and then make the call 
+  <code>min(a,b)</code>. This will return the smaller of the two numbers. We assign 
+  the return value to the variable, <code>smaller</code>. The return value essentially replaces 
+  the method call as if we had coded: 
+</p><p class="segment">int smaller = 10; </p>
+<p>&nbsp;</p>
+<h2>Calling Our Method From a Different Class</h2>
+<p>&nbsp;</p>
+<p>One reason for writing methods is that the code can be reused. Now if we write 
+  another program that needs to find the minimum of two numbers, we can use (call) 
+  the <code>min</code> method that has already been written. This will save us 
+  time and is less error-prone since we don't have to debug again.</p>
+<p>We need to tell Java where to find the <code>min</code> method. Where is it 
+  located? What class is it in? Since the min method is static, we do this by 
+  specifying the class name (<code>MinTest</code>) and a dot preceding the method 
+  name. Like this:</p>
+<p class="segment">MinTest.min(parameter1, parameter2);</p>
+<p>&nbsp;</p>
+<p>Here is the new application to use our <code>min</code> method. It should be 
+  located in the same directory as <code>MinTest</code>.</p>
+<h3>AnotherTest.java</h3>
+<pre class="code">/**
+   Demonstrates calling the min method from
+   main method in a different class
+   @author Kathleen O'Brien
+*/
+public class AnotherTest
+{
+   public static void main(String[] args)
+   {
+      int num1 = 25;
+      int num2 = 17;
+      int smaller = MinTest.min(num1, num2);
+      System.out.println("The smaller of "
+        + num1 + " and " + num2 + " is " + smaller);
+   }
+}</pre>
+<p></p>
+<p>&nbsp;</p>
+<p>Java needs to abe able to find MinTest. It will look in the current directory 
+  (where AnotherTest is located). if it doesn't find the class, it will look in 
+  java.lang and in any imported classes and libraries. In this case, MinTest and 
+  AnotherTest should be in the same project.</p>
+<p>&nbsp;</p>
+<h2>Reusability</h2>
+<p>Reusability is an important tenet of object-oriented programming. Once you write 
+  a <code>min</code> method and test it, you can use it over and over. And other 
+  people can use it.</p>
+<p>Once <code>nextInt</code> method of <code>Scanner</code> class was written, 
+  it could be used by any program. Jane can use it, so can Dick &#8230; </p>
+<p>Code reuse is highly desirable. </p>
+<ol>
+  <li>It saves time; you don't have to rewrite the code to read an <code>int</code> 
+    every time you need to do that. You just create a <code>Scanner</code> and 
+    call its <code>nextInt()</code> method.</li>
+  <li>It is less error prone. If you had to rewrite, you might (and probably would) 
+    introduce errors</li>
+</ol>
+<p>&nbsp;</p>
+<h2>Testing Our Method</h2>
+<p>Let's write one more program to use our <code>min</code> method. We need to 
+  thoroughly test the method. It is not enough to write a method and execute it 
+  with one set of values. We want to assure ourselves that the method works correctly 
+  for all sets of values. For example, our method seems to work for 2 positive 
+  numbers. But will it work correctly for 
+</p><ol>
+  <li> the numbers in either order - smaller first or last?</li>
+  <li> two negative numbers?</li>
+  <li> one negative and one positive?</li>
+</ol>
+<p>
+</p><p>Testing is very important. You should put the same care into testing that you 
+  put into the coding itself.</p>
+<p>Here is an example of testing.</p>
+<h3>YetAnotherTest.java</h3>
+<pre class="code">/**
+   Demonstrates calling the min method from
+   main method in a different class. Use a
+   printMin method and call it repeatedly
+   with different values
+   @author Kathleen O'Brien
+*/
+public class YetAnotherTest
+{
+   public static void main(String[] args)
+   {
+      int value1 = 25;
+      int value2 = 17;
+      printMin(value1, value2);
+      printMin(value2, value1);
+      printMin(-15, -20);
+      printMin(-20, -15);
+      printMin(9, -7);
+      printMin(-7, 9);
+   }
+
+   /**
+     Prints the minimum of two values
+     @param num1 the first value
+     @param num2 the second value
+   */
+   public static void printMin(int num1, int num2)
+   {
+      int smaller = MinTest.min(num1, num2);
+      System.out.println("The smaller of "
+        + num1 + " and " + num2 + " is " + smaller);
+   }
+}</pre>
+<p>&nbsp;</p>
+<p>Notice the <code>printMin()</code> method in this class. This is an example 
+  of using a method to simplify the code to do repeated tests. We don't have to 
+  make multiple calls to <code>MinTest.min()</code> followed by <code>System.out.println()</code>. 
+  A print method like this is often a good idea in a test program.</p>
+<p>&nbsp;</p>
+ 
+<div class="endlesson">
+<p class="endheader">Next</p>
+<p>Next is a discussion of passing parameters</p>
+ <p>&nbsp;</p>
+ </div>
+
+
+
+
+</body></html>

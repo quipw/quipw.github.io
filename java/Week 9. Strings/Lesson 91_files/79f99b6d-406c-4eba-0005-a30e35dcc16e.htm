@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ***********************************************************************************
+ * $URL: https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9m10/melete-app/src/webapp/melete/view_section.jsp $
+ * $Id: view_section.jsp 77626 2011-11-28 21:46:20Z mallika@etudes.org $  
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008, 2009,2010,2011 Etudes, Inc.
+ *
+ * Portions completed before September 1, 2008 Copyright (c) 2004, 2005, 2006, 2007, 2008 Foothill College, ETUDES Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ **********************************************************************************
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Modules: Student View</title>
+<link href="bec45586-f56c-4333-00fd-412c1d1611c4_data/tool_base.css" type="text/css" rel="stylesheet" media="all">
+<link href="79f99b6d-406c-4eba-0005-a30e35dcc16e_data/rtbc004.css" type="text/css" rel="stylesheet" media="all">
+<link href="bec45586-f56c-4333-00fd-412c1d1611c4_data/tool.css" type="text/css" rel="stylesheet" media="all">
+<script type="text/javascript" language="JavaScript" src="Lesson%2091_files/headscripts.js"></script>
+</head>
+<body onload="setMainFrameHeight('Main79f99b6dx406cx4ebax0005xa30e35dcc16e');setFocus(focus_path);">
+<div class="portletBody">
+
+
+
+<script type="text/javascript" language="javascript" src="79f99b6d-406c-4eba-0005-a30e35dcc16e_data/sharedscripts.js"></script>
+
+
+
+
+
+
+
+
+<form id="viewsectionform" method="post" action="https://myetudes.org/portal/tool/79f99b6d-406c-4eba-0005-a30e35dcc16e/view_section" enctype="application/x-www-form-urlencoded">
+ 
+	
+	  <div class="navIntraTool"><label class="TopImgViewText">
+View</label><input id="viewsectionform:top:AuthorButton" name="viewsectionform:top:AuthorButton" value="Author" title="Author" class="TopImgAuthor" type="submit"><input id="viewsectionform:top:ManageButton" name="viewsectionform:top:ManageButton" value="Manage" title="Manage" class="TopImgManage" type="submit"><input id="viewsectionform:top:PreferencesButton" name="viewsectionform:top:PreferencesButton" value="Preferences" title="Preferences" class="TopImgPreference" type="submit"></div>
+<!--
+ ***********************************************************************************
+ * $URL: https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9m10/melete-app/src/webapp/melete/topnavbar.jsp $
+ * $Id: topnavbar.jsp 77229 2011-11-08 18:42:08Z rashmi@etudes.org $  
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008, 2009,2010, 2011 Etudes, Inc.
+ *
+ * Portions completed before September 1, 2008 Copyright (c) 2004, 2005, 2006, 2007, 2008 Foothill College, ETUDES Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ **********************************************************************************
+-->
+
+
+
+
+  	
+ 	 
+
+    
+     
+    
+    
+     
+  
+    
+ 	   
+
+<!-- End code to display images horizontally. -->
+
+ 
+	  
+<p></p>   
+<table class="maintableCollapseWithNoBorder">
+<tbody><tr>
+<td colspan="2" align="center">
+
+
+ 	<table id="viewsectionform:topmod:navSectionsItem" style="border-width: medium; border-color: rgb(226, 228, 232);">
+<tbody>
+<tr>
+<td><a id="viewsectionform:topmod:prevItem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:topmod:prevItem';document.forms['viewsectionform']['modid'].value='688357473';document.forms['viewsectionform']['secid'].value='688390632';document.forms['viewsectionform']['modseqno'].value='14'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:topmod:prevMsg">Prev</span></a></td>
+<td><span id="viewsectionform:topmod:seperatorMsg1"> | </span></td>
+<td><a id="viewsectionform:topmod:TOCitem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:topmod:TOCitem'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:topmod:TOCMsg">Table Of Contents </span></a></td>
+<td><span id="viewsectionform:topmod:seperatorMsg2"> | </span></td>
+<td><a id="viewsectionform:topmod:nextItem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:topmod:nextItem';document.forms['viewsectionform']['modid'].value='688357473';document.forms['viewsectionform']['secid'].value='688390627';document.forms['viewsectionform']['modseqno'].value='14'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:topmod:nextMsg">Next</span></a></td>
+</tr>
+</tbody>
+</table>
+<!--
+ ***********************************************************************************
+ * $URL: https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9m10/melete-app/src/webapp/melete/view_navigate.jsp $
+ * $Id: view_navigate.jsp 77082 2011-10-24 18:38:10Z rashmi@etudes.org $  
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008 Etudes, Inc.
+ *
+ * Portions completed before September 1, 2008 Copyright (c) 2004, 2005, 2006, 2007, 2008 Foothill College, ETUDES Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ **********************************************************************************
+-->
+
+
+
+
+	
+		
+				
+			
+			
+			
+     	
+     	
+				
+			
+			
+     	
+     
+		
+					
+		
+	
+	
+		  
+	    
+	
+			
+					
+		
+	
+		
+		  
+		    
+            
+            
+     
+      
+		  
+		    
+        
+    
+		  
+		    
+       
+     
+		  
+       
+    
+	
+
+<!-- breadcrumbs -->
+
+	
+		
+						
+     	
+      
+	
+<table id="viewsectionform:crumbsItem" style="border-width: medium; border-color: rgb(226, 228, 232);">
+<tbody>
+<tr>
+<td><a id="viewsectionform:moduleItem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:moduleItem'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:modTitle">Lesson 9: Strings</span></a><span id="viewsectionform:sep"> » </span><span id="viewsectionform:secTitle">Introduction</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</td>
+</tr><tr>
+<td colspan="2" align="right">										
+  
+		    	
+		    	
+	  			
+	  			
+				       
+ 	<a id="viewsectionform:bookmarkSectionLink" href="https://myetudes.org/portal/tool/79f99b6d-406c-4eba-0005-a30e35dcc16e/view_section?moduleId=688357473&amp;sectionId=688390626&amp;sectionTitle=Introduction" onclick="OpenBookmarkWindow(688390626,'Introduction','','','','Melete Bookmark Window');"><img id="viewsectionform:bul_gif" src="79f99b6d-406c-4eba-0005-a30e35dcc16e_data/bookmark-it.png" alt="" class="AuthImgClass"><span id="viewsectionform:bookmarktext">Bookmark it!</span></a>		
+ | 			
+ 
+						
+							
+							
+						
+                        	
+                        						
+<a id="viewsectionform:myBookmarksLink" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:myBookmarksLink';document.forms['viewsectionform']['fromPage'].value='view_section';document.forms['viewsectionform']['fromModuleId'].value='688357473';document.forms['viewsectionform']['fromModuleSeqNo'].value='14';document.forms['viewsectionform']['fromSectionId'].value='688390626'; document.forms['viewsectionform'].submit(); return false;"><img id="viewsectionform:mybook_gif" src="79f99b6d-406c-4eba-0005-a30e35dcc16e_data/my-bookmarks.png" alt="" class="AuthImgClass"><span id="viewsectionform:mybks">My Bookmarks</span></a>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="left">
+     
+	 <span id="viewsectionform:modtitle" class="bold style6">Lesson 9: Strings</span>
+</td>
+</tr>    
+
+<tr>
+<td colspan="2" align="left">
+
+
+ 	
+ 	
+
+
+	 	
+
+
+	
+	
+
+
+	
+	
+	
+       
+       
+    
+    
+  
+  	<!-- render typeUpload  content in same window --> 
+ 	
+
+	<!-- render typeEditor content with form tags --> 
+	
+		
+	
+
+	<!-- render typeEditor content without form tags -->
+		
+
+	<!-- render typeLTI content -->
+		
+
+<table id="viewsectionform:sectionContentGrid" width="100%" border="0">
+<tbody>
+<tr>
+<td><span id="viewsectionform:title" class="bold style7">Introduction</span></td>
+</tr>
+<tr>
+<td><span id="viewsectionform:trackDateStr" class="italics"></span></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td><input id="viewsectionform:contentType" name="viewsectionform:contentType" value="typeLink" type="hidden"><input id="viewsectionform:openWindow" name="viewsectionform:openWindow" value="false" type="hidden"><span id="viewsectionform:contentFrame"><iframe id="iframe1" src="79f99b6d-406c-4eba-0005-a30e35dcc16e_data/strings1_intro.htm" style="visibility: visible;" border="0" scrolling="auto" width="100%" frameborder="0" height="700"></iframe></span></td>
+</tr>
+</tbody>
+</table>
+
+
+</td>
+
+</tr>    
+<tr>
+<td colspan="2" align="center">
+					
+						<table id="viewsectionform:bottommod:navSectionsItem" style="border-width: medium; border-color: rgb(226, 228, 232);">
+<tbody>
+<tr>
+<td><a id="viewsectionform:bottommod:prevItem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:bottommod:prevItem';document.forms['viewsectionform']['modid'].value='688357473';document.forms['viewsectionform']['secid'].value='688390632';document.forms['viewsectionform']['modseqno'].value='14'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:bottommod:prevMsg">Prev</span></a></td>
+<td><span id="viewsectionform:bottommod:seperatorMsg1"> | </span></td>
+<td><a id="viewsectionform:bottommod:TOCitem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:bottommod:TOCitem'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:bottommod:TOCMsg">Table Of Contents </span></a></td>
+<td><span id="viewsectionform:bottommod:seperatorMsg2"> | </span></td>
+<td><a id="viewsectionform:bottommod:nextItem" href="#" onclick="document.forms['viewsectionform']['viewsectionform:_idcl'].value='viewsectionform:bottommod:nextItem';document.forms['viewsectionform']['modid'].value='688357473';document.forms['viewsectionform']['secid'].value='688390627';document.forms['viewsectionform']['modseqno'].value='14'; document.forms['viewsectionform'].submit(); return false;"><span id="viewsectionform:bottommod:nextMsg">Next</span></a></td>
+</tr>
+</tbody>
+</table>
+<!--
+ ***********************************************************************************
+ * $URL: https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9m10/melete-app/src/webapp/melete/view_navigate.jsp $
+ * $Id: view_navigate.jsp 77082 2011-10-24 18:38:10Z rashmi@etudes.org $  
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008 Etudes, Inc.
+ *
+ * Portions completed before September 1, 2008 Copyright (c) 2004, 2005, 2006, 2007, 2008 Foothill College, ETUDES Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ **********************************************************************************
+-->
+
+
+
+
+	
+		
+				
+			
+			
+			
+     	
+     	
+				
+			
+			
+     	
+     
+		
+					
+		
+	
+	
+		  
+	    
+	
+			
+					
+		
+	
+		
+		  
+		    
+            
+            
+     
+      
+		  
+		    
+        
+    
+		  
+		    
+       
+     
+		  
+       
+    
+	
+					
+</td>
+</tr>
+</tbody></table>
+
+
+
+<table class="maintableCollapseWithNoBorder" height="20">
+   	<tbody><tr>
+	 <td class="meleteLicenseMsg center" align="center"><b>
+  			<span id="viewsectionform:lic1_val1">Copyright (c)  </span><span id="viewsectionform:lic1_val4">2007</span><span id="viewsectionform:lic1_val2"><br>Kathleen O'Brien</span><!--
+ ***********************************************************************************
+ * $URL: https://source.sakaiproject.org/contrib/etudes/melete/tags/2.9m10/melete-app/src/webapp/melete/license_info.jsp $
+ * $Id: license_info.jsp 61779 2009-07-14 17:29:43Z mallika@etudes.org $  
+ ***********************************************************************************
+ *
+ * Copyright (c) 2008 Etudes, Inc.
+ *
+ * Portions completed before September 1, 2008 Copyright (c) 2004, 2005, 2006, 2007, 2008 Foothill College, ETUDES Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ *
+ **********************************************************************************
+-->
+
+
+   <!--License code Copyright-->
+    
+  
+       
+  
+      <!--End license code Copyright-->
+ <!--License code Public domain-->
+    
+   
+    
+   
+    
+    
+  
+      <!--End license code Public domain-->   
+      <!--License code CC license-->
+    
+   
+   
+     
+    
+
+   
+      <!--End license code CC license-->     	
+	 
+        <!--License code fairuse license-->
+      
+       
+        
+
+          <!--End license code fairuse license-->      
+         </b></td></tr>
+	    </tbody></table>
+	   
+<script type="text/javascript">
+	window.onload=function(){
+	 var oIframe = document.getElementById("iframe3");
+	 if(oIframe)
+		 {
+	        var oDoc = oIframe.contentWindow || oIframe.contentDocument;
+		    if (oDoc.document) {
+			oDoc = oDoc.document;	
+			oIframe.style.height = oDoc.body.scrollHeight + 40 +"px";				       
+		    } else oIframe.height = oDoc.body.offsetHeight + 40 ; 
+		   	for (i=0; i < document.styleSheets.length; i++)
+			{
+			  var link = document.createElement("link");
+			  //finish constructing the links
+		       link.setAttribute("rel", "stylesheet");
+		       link.setAttribute("type", "text/css");
+			   //assign this new link the href of the parent one
+		       link.setAttribute("href", document.styleSheets[i].href);
+			   oDoc.body.appendChild(link); 
+		    }
+		    						
+		  }
+
+	  setMainFrameHeight('Main79f99b6dx406cx4ebax0005xa30e35dcc16e');			  
+	 }
+</script>
+ <input name="com.sun.faces.VIEW" value="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" type="hidden">
+ <input name="viewsectionform" value="viewsectionform" type="hidden"><input name="modseqno" type="hidden"><input name="fromModuleSeqNo" type="hidden"><input name="modid" type="hidden"><input name="secid" type="hidden"><input name="fromModuleId" type="hidden"><input name="fromPage" type="hidden"><input name="viewsectionform:_idcl" type="hidden"><input name="fromSectionId" type="hidden"></form>
+</div>
+
+
+</body></html>

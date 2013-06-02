@@ -1,0 +1,257 @@
+<html><head>
+<title>Math and Random</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+-->
+</style>
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+<h1>Math and Random Classes</h1>
+<p>&nbsp;</p>
+<h2>Math class</h2>
+<p>There is a class called Math in the java.lang library. It contains a set of 
+  methods for doing basic numeric calculations. There are trig methods (sin, cos, 
+  etc) abs (absolute value), pow (exponentiation), min, max, round, and many other 
+  methods. </p>
+<p>Look at the Math class in Sun's online <a href="http://java.sun.com/j2se/1.5.0/docs/api/" target="_blank">Java 
+  API documentation</a> (opens in a new window). The page is divided into 3 sections. 
+  In the upper left-hand section, click on <i>All Classes</i>. The lower left-hand 
+  section contains a list of all the classes that you got when you downloaded 
+  the JDK. Scroll down until you find Math. Click on it and the documentation 
+  for the Math class appears in the right section. </p>
+<p>Scroll down to the section titled Field Summary. There are two constants defined 
+  here for your use, E and PI. Notice they are in all uppercase. You access them 
+  from your programs by specifying the class name and then the field name - <code>Math.E</code> 
+  and <code>Math.PI</code>. </p>
+<p>Here is an example.</p>
+<pre class="code">/**look at Math.PI
+   @author Kathleen O'Brien
+*/
+
+public class MathPIDemo
+{
+   public static void main (String[] arg)
+   {
+      double r = 2.5;
+      double area = Math.PI * r * r;
+      System.out.println("Radius = " +r+ "  Area = " +area);
+   }
+}</pre>
+<p>&nbsp;</p>
+<p>Scroll down a little more to <i>Method Summary</i>. These are static methods 
+  that you can use in your applications. You call them by specifying the class 
+  name dot method name - <code>Math.abs(parameter)</code> or <code>Math.pow(parameter, 
+  parameter)</code>.</p>
+<p>Notice that there are four methods called <code>abs</code>. They return the 
+  absolute value of the parameter. They are actually different methods that have 
+  the same name. Notice that they take different parameters: one takes a <code>double</code> 
+  parameter, one takes a <code>float</code>, one an <code>int</code> and one a 
+  <code>long</code>. Java tells the methods apart by the parameter specified. 
+  If you call the <code>abs</code> method with a <code>double</code>, the version 
+  of the method that takes a double is called and a double value is returned. 
+  If you call the <code>abs</code> method with an <code>int</code>, the version 
+  that takes an int is called, and it returns an int. This technique is called 
+  overloading.</p>
+<p>You can read about the various Math methods either in the documentation or 
+  in the text.</p>
+<p>We will look at <code>Math.pow</code> here. The method takes two doubles. The 
+  method returns the value of the first parameter raised to the power of the second. 
+  For example:</p>
+<p> Math.pow(8, 2) is 8<sup>2</sup> or 64.</p>
+<p>&nbsp;</p>
+<p>If you find yourself needing to manipulate numbers, check this class to see 
+  if it has a method you can use.</p>
+<p>&nbsp;</p>
+<h2>Random Class</h2>
+<p align="left">The Math class has a method <code>random</code> which will return 
+  a random number greater than or equal to 0 and less than 1. But we often want 
+  random integers, and I find the Random class easier to use for this. Random 
+  is in the java.util package so you need to import java.util.Random. To use the 
+  class, create a new Random object with the new operator similar to what you 
+  do to create a new Scanner.</p>
+<pre class="segment">import java.util.Random;<br>...
+Random generator = new Random();</pre>
+<p>&nbsp;</p>
+<p>Now to get a random integer greater than or equal to 0 but less than 10 (0, 
+  1, 2 , 3, ... 8, 9):</p>
+<p class="segment">int randomInt = generator.nextInt(10);</p>
+<p>&nbsp;</p>
+<p>To get a random integer greater than or equal to 1 and less than or equal to 
+  10:</p>
+<p class="segment">randomInt = generator.nextInt(10) + 1;</p>
+<p>&nbsp;</p>
+<p>Random also contains a method that will return a random double between 0 and 
+  1. You can look at the class in the documentation to see other methods.</p>
+<p>&nbsp;</p>
+<p>Technically speaking the methods of the Random class return pseudo-random numbers. 
+  It doesn't make a difference to us here , but it you are interested, read the 
+  documentation on the Random class</p>
+<p>&nbsp;</p>
+<p>Here is a class with methods to simulate rolling a pair of dice. In the roll() 
+  method we use Random's nextInt method to get a random integer 1, 2, 3, 4, 5, 
+  or 6. To roll two dice, we simply class roll twice.</p>
+<h3>DiceRandomClass</h3>
+<pre class="code">import java.util.Random;
+
+/**
+ * 
+ * this program contains methods to simulate rolling of dice
+ * using nextInt from the Random class
+ * @author Kathleen O'Brien
+ *
+ */
+public class DiceRandomClass {
+	
+	//the variable generator must be declared static so that the static method
+	//roll can access it. Try removing the keyword static and you will get a 
+	//syntax error
+	static Random generator = new Random();
+	
+	/**
+	 * returns the result of throwing one die
+	 * @return the result of throwing 1 die
+	 */
+   public static int roll()
+   {
+	   int count = generator.nextInt(6) + 1;
+	   return count;
+   }
+
+   /**
+    * Gets the result of throwing 2 dice
+    * @return the result of throwing 2 dice
+    */
+   public static int roll2()
+   {
+	   int count = roll() + roll();
+	   return count;
+
+   }
+
+}
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>This class has no main method. It can not execute. To use these methods we 
+  need an application with a main method. Put this class in the same project (folder) 
+  as DiceRandomClass</p>
+<h3>DiceRandomClassTest</h3>
+<pre class="code">/**
+ * This program test the Dice class methods
+ * @author Kathleen O'Brien
+ *
+ */
+public class DiceRandomClassTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("The result of tossing one die is " 
+           + DiceRandomClass.roll());
+		System.out.print("The result of tossing 2 dice is ");
+		System.out.println(DiceRandomClass.roll2());
+	}
+}
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="endlesson">
+<p class="endheader">Next</p>
+  <p>Two final topics in this lesson on methods are scope and overloading.</p>
+ <p>&nbsp;</p>
+ </div>
+
+
+</body></html>
