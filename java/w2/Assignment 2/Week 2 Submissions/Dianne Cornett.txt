@@ -1,0 +1,2 @@
+Lab: 8.5/10 (output prints to console instead of JMessageDialog)
+HW: 18/20 (you compounded yearly instead of monthly)

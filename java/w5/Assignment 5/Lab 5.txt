@@ -1,0 +1,98 @@
+Lab 5 Computing Commissions
+
+In this lab you will create an application that computes the commission due a sales person. The commission on the first $6,000 is 10 percent. The commission on the amount greater than $6000 but less than or equal to $10,000 is 12%. The commission on the amount over $10,000 is 15 percent.
+
+Sales Amount Commission Rate
+$0.01 - $6,000 10%
+$6,000.01 – $10,000 12%
+$10,000.01 and above 15%
+
+The application consists of 2 classes called Commission and CommissionTest. Commission contains the static method computeCommission().  CommissionTest contains the main method.  For easier testing, the class CommissionTest contains a static method printCommission (). The printCommission() method will call computeCommission() in the Commission class and format the output. The main method will call printCommission() multiple times with different values.
+
+
+The method header for computeCommission() is:
+
+public static double computeCommission(double salesAmount)
+
+
+The header of the printCommission method is:
+
+public static void printCommission(double salesAmount)
+
+The printCommission() method must be static so that it can be called by the static main method.
+
+I am providing the skeleton for Commission Test at the bottom of this page. You are to complete that class and write the Commission class. Do not get input from the user. "Hard code" your test values. Hard-code means that you code the values into your program as literals rather than getting them form the user at run time.
+
+Use constants in your programs in place of literals (like $4000, $10000, .12)
+
+For example
+final double COMMISSION1 = .10;
+final double BOTTOM_TIER = 6000;
+final double TOP_TIER = 10000;
+
+Be sure to test a value in every tier of the commission scale. Test the boundary conditions. Boundary conditions are where things change. For example test 6000 and 6000.01 because the commission rate changes there.
+
+
+/*SAMPLE OUTPUT
+
+The commission on -3000.00 is 0.00
+The commission on 3000.00 is 300.00
+The commission on 6000.00 is 600.00
+The commission on 6000.01 is 600.00
+The commission on 6001.00 is 600.12
+The commission on 8000.00 is 840.00
+The commission on 10000.00 is 1080.00
+The commission on 10000.01 is 1080.00
+The commission on 10001.00 is 1080.15
+The commission on 11000.00 is 1230.00
+
+*/
+
+CommissionTest Skeleton
+
+/*
+   This class tests the static method computeCommission from the Commission class
+   @author Kathleen O'Brien
+*/
+
+public class CommissionTest
+{
+   public static void main(String[] args)
+   {
+
+      //calculate and print the commission
+
+      printCommission(3000);
+
+      printCommission(6000);
+
+               ...
+
+
+      //repeat to test thoroughly
+
+   }
+
+   public static void printCommission(double salesAmount)
+   {
+                
+      double commission = ...
+       System.out.printf("\nThe commission on %.2f is %.2f",          salesAmount, commission);
+   }
+}
+
+Note 1:
+
+The commission on 7000 is
+
+   6000 * .1 + 1000 * .12
+
+and is NOT 
+
+   7000 * .12
+
+Note 2:
+
+In computeCommission, be sure to handle the case where the caller passes a negative sales amount. In this case you should return 0. In CIS 27B you will learn how to throw an exception in cases like this.
+
+You will need to upload both files.

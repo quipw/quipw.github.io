@@ -1,0 +1,248 @@
+<html><head>
+<title>Strings10 - methods</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+<!--
+body
+{
+     font-family: verdana,arial,helvetica,sans-serif;
+     background: white;
+     color: black;
+}
+
+p,th,td,li,ul,ol {
+     font-family: verdana,arial,helvetica,sans-serif;
+}
+h1 
+{  
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   color: navy; 
+   padding-top: 15px; 
+   padding-bottom: 15px; 
+   font-size: 36px;
+   border: medium #3300CC solid;
+   
+   
+   text-align: center;
+}
+h2 
+{
+   font-family: Georgia, "Times New Roman", Times, serif;
+}
+caption
+{
+   font-weight: bold;
+}
+
+code
+{
+     font-size: 105%;
+     font-family: "Courier New",Courier,monospace;
+     color: navy;
+}
+
+.navbar 
+{  
+   font-family: Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: center;
+}
+.code
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;     
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #CCCCCC;
+     margin:  1em 5em 1em 1em;
+}
+.segment
+{
+     font-family: "Courier New", Courier, monospace;
+     line-height: 133%;
+     font-size: 110%;    
+     border: thin navy solid;
+     padding: 0.5em 0.5em 0.5em 40px;
+     color: navy;
+     background-color: #FFFF99;
+     margin:  1em 5em 1em 1em;
+}
+.dos 
+{
+   font-family: "Courier New", Courier, monospace;
+   color: #FFFFFF;
+   background-color: #000000;
+   width: 75%; 
+   padding: 3px 1px 7px 7px;
+   font-size: 110%;
+; margin: 10px  2em
+}
+.endlesson 
+{
+   border: medium navy solid;
+   margin-right: 5em;
+   padding: 1px 5px 5px 10px;
+}
+.endheader
+{
+     font-family: Georgia, "Times New Roman", Times, serif;
+     color: navy;
+     font-weight: bold;
+     font-size: 150%;
+}
+.box
+{
+    border: thin black solid;
+	padding: 2px 10px 2px 10px;
+	
+}
+-->
+</style>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<h1 align="center">substring and indexOf Methods</h1>
+
+<p>&nbsp;</p>
+<p>In this section we will look at methods for accessing the characters in a string.</p>
+<p align="left">&nbsp;</p>
+<h2 align="left">indexOf Method</h2>
+<p align="left">The <code>indexOf</code> method lets you search a string for a 
+  specific character or set of characters. There are several versions of the indexOf 
+  method. Here is the syntax of one:</p>
+<p class="segment" align="left">indexOf(char myChar);</p>
+<p align="left">returns the index of the first occurrence of the character myChar or 
+  -1 if not found.</p>
+<p align="left">Below is a String definition and a picture of the string with 
+  its characters numbered.</p>
+<p class="segment">String city = "Cupertino";</p>
+<p align="left">&nbsp;</p>
+<table width="30%" border="1" cellpadding="10">
+  <tbody><tr> 
+    <td>C</td>
+    <td>u</td>
+    <td>p</td>
+    <td>e</td>
+    <td>r</td>
+    <td>t</td>
+    <td>i</td>
+    <td>n</td>
+    <td>o</td>
+  </tr>
+  <tr> 
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+  </tr>
+</tbody></table>
+<p align="left">&nbsp;</p>
+<p align="left">Look at this statement</p>
+<p class="segment">city.indexOf('p');</p>
+<p align="left">It returns the int value 2. </p>
+<p align="left">&nbsp;</p>
+<p align="left">If we want to use the value later we must assign it to a variable.</p>
+<p class="segment" align="left">int index = city.indexOf('p');</p>
+<p align="left"><br>
+  <br>
+  Here is the syntax of another version of the method</p>
+<p class="segment" align="left">indexOf(String s);</p>
+<p align="left">It returns the index of the first occurrence of the <code>String</code> s or 
+  -1 if not found.</p>
+<p align="left">&nbsp;</p>
+<p align="left">If we want to use the value later we must assign it to a variable.<br>
+</p>
+<p class="segment">index = city.indexOf("tin");</p>
+<p align="left">This method call returns the value 5.</p>
+<p align="left"><br>
+  Remember characters are specified in single quotes while strings are specified 
+  in double quotes.</p>
+<p align="left">There are two other methods called indexOf that have different 
+  parameter lists. They are discussed in your text.<br>
+</p>
+<p align="left">This is an example of overloading. The Java Virtual Machine calls 
+  the correct method depending on the parameter list.</p>
+<p align="left"><br>
+</p>
+<h2 align="left">The substring Method</h2>
+<p align="left">There is a method to extract a substring of a string.</p>
+<p class="segment" align="left">city.substring(start, pastEnd);</p>
+<p align="left">returns a new string. The first character included in the substring 
+  is at index <i>start.</i> The last character included is at <i>pastEnd-1</i>.</p>
+<p align="left">&nbsp;</p>
+<p align="left">In this example:</p>
+<p class="segment" align="left">String sub = city.substring(3, 6);</p>
+<p align="left">the first character to include is at index 3. The last is at index 
+  5. The string returned is "ert"</p>
+<p align="left">&nbsp;</p>
+<table width="30%" border="1" cellpadding="10">
+  <tbody><tr> 
+    <td>C</td>
+    <td>u</td>
+    <td>p</td>
+    <td bgcolor="#98ffff">e</td>
+    <td bgcolor="#98ffff">r</td>
+    <td bgcolor="#98ffff">t</td>
+    <td>i</td>
+    <td>n</td>
+    <td>o</td>
+  </tr>
+  <tr> 
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td bgcolor="#98ffff">3</td>
+    <td bgcolor="#98ffff">4</td>
+    <td bgcolor="#98ffff">5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+  </tr>
+</tbody></table>
+<p align="left">&nbsp;</p>
+<p align="left">The length of the substring is pastEnd - start (in this example: 
+  6 - 3 = 3).</p>
+<p align="left"><br>
+  There is another substring method. This statement</p>
+<p class="segment" align="left">city.substring(5);</p>
+<p align="left">returns a string consisting of the characters from index 5 to 
+  the end of the string. In this case, the string returned is "tino".</p>
+<p align="left"><br>
+  This is yet another example of overloading.</p>
+<p align="left"><br>
+I'll ask you to use substring() on the final so be sure you understand it.</p>
+<p align="left">&nbsp;</p>
+<h3 align="left">Try it yourself</h3>
+
+ 
+<p> If <code>String city = "Cupertino";</code> what is city.substring(2,7)? 
+  <select>
+    <option selected="selected">answer</option>
+    <option>"perti"</option>
+  </select>
+</p>
+<p align="left"> What is city.substring(2)?
+  <select>
+     <option selected="selected">answer</option>
+	 <option>"pertino"</option>
+  </select>
+</p>
+<p align="left">&nbsp;</p>
+<div class="endlesson">
+<p class="endheader">Next</p>
+  <p>Now let's see how to determine if two strings are equal. It is not as simple 
+    as your might think at first.</p>
+  <p>&nbsp;</p>
+</div>
+
+
+
+</body></html>

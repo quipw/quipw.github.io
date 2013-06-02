@@ -1,0 +1,16 @@
+Homework 7 Sorting
+
+Write a static method that will sort an array of integers into descending order. Next write an application that fills an array with 10 random integers between 1 and 100. (Use a loop.) The application prints the original array and then passes the array to your sort method. Finally the application prints the sorted array. Print 10 items on a line.
+
+Declare 10 and 100 as a contants.
+
+
+Note: Descending order means the biggest number will be first. You can modify the selection sort in the textbook to sort in descending order
+
+Note: descendingSort should not print.
+
+Hint: The method should have this signature
+
+public static void descendingSort (int[] list)
+
+Upload the program with the output and click Finish. See Assignment Submission for details.
